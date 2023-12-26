@@ -1,0 +1,80 @@
+<html>
+    <head><title> Signup</title>
+    <style>
+            *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            margin:50px 80px;
+            
+        }
+        form{
+            margin-left:34%;
+            margin-top:0;
+            padding:10px;
+            box-shadow: 0 0 2px 0.5px  #1F2937 ;
+            border-radius: 10px;
+            width: 30%;
+            
+        }
+        hr{
+            border-color:  #1F2937;
+        }
+        input[type=email],input[type=password],input[type=text]{
+            padding:10px;
+            border:2px;
+            border-radius: 10px;
+            width: 100%;
+            
+           
+        }
+        input:focus{
+            outline: none;      
+            box-shadow: 0 0 0 1px black; 
+            
+          }
+
+        input[type=submit]{
+            appearance: none;
+            padding:10px;
+            border: none;
+            background-color:  #1F2937;
+            color: white;
+            font-weight: 600;
+            border-radius: 5px;
+            width:100%;
+        }
+        
+            
+       
+    </style></head>
+    <body>
+        
+        <form action="" method="post" >
+            {% csrf_token %}
+
+           <center><h2>Sign Up</h2></center>
+           <hr>
+            <label for="fname">First Name:</label><br><br>
+            <input name="firstname" type="text" placeholder="Enter your First Name" required><br><br>
+            
+            <label for="lname">Last Name:</label><br><br>
+            <input name="lastname" type="text" placeholder="Enter your Last Name" required><br><br>
+            
+            <label for="phone">Phone: </label>
+            <input name="phone" type="text" placeholder="Enter your phone no" required><br><br>
+            
+            <label for="Username"> Username:</label><br><br>
+        <input name="username" type="text" placeholder="Enter your username" required><br><br>
+
+            <label for="password"> Password:</label><br><br>
+            <input type="password" name="password" placeholder="Enter password" required><br><br>
+            
+            <input type="submit" value="Sign Up">
+            <br><br>
+           <center> Already have an account? <a href="{% url 'loginpage' %}">Log In</a></center>
+            
+        
+        </form>
+    </body>
+</html>

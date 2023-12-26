@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body{
+        background-color: #12458D;
+    }
+
+    .main{
+        text-align: center;
+        margin-top: 230px;;
+
+    }
+    .right{
+        display: inline-block;
+        height:450px;
+        width:450px;
+        background-color: white;
+        border-radius: 50%;
+        vertical-align: middle;
+        box-shadow: 0px 5px 10px black;
+    }
+    #left{
+        margin-right: 140px;
+
+    }
+    #line{
+        height:400px;
+        width: 2px;
+        color: white;
+        margin-left:-100px ;
+    }
+    #Right{
+        margin-left: 40px;;
+    }
+    .user{
+        margin-top: 0px;
+        height: 800px;
+        width: 371px;
+    }
+    img{
+        margin-top: 80px;
+        height: 285px;
+        width: 250px;
+        border: 50%;
+        transition: 3s;
+    }
+
+    .text{
+        background: transparent;
+        height: 340px;
+        width: 330px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 595px;
+        margin-top: 300px;;
+        border-radius: 80%;
+        transition: 0.5s;
+    }
+    .text:hover{
+        background: rgb(255, 255, 255);
+    }
+    .text h3{
+        margin-right: 205px;
+        margin-top: 120px;
+        font-weight: 100;
+        color:#12458D;
+        font-size: 40px;
+        top: 5%;
+        bottom: 0;
+        left: 30%;
+        transform: translateX(50%);
+        transform: translateY(60%);
+        position: absolute;
+        opacity:0;
+        transition: 0.5s;
+    }
+    .text:hover h3{
+        bottom: 49%;
+        opacity: 1;
+    }
+
+
+    .text1{
+        background: transparent;
+        height: 340px;
+        width: 330px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 1125px;
+        margin-top: 300px;;
+        border-radius: 80%;
+        transition: 0.5s;
+    }
+    .text1:hover{
+        background: rgb(255, 255, 255);
+    }
+
+    .text1 h3{
+        margin-right: 190px;
+        margin-top: 120px;
+        font-weight: 300;
+        color:#12458D;
+        font-size: 40px;
+        top: 5%;
+        bottom: 0;
+        left: 30%;
+        transform: translateX(50%);
+        transform: translateY(60%);
+        position: absolute;
+        opacity:0;
+        transition: 0.5s;
+    }
+    .text1:hover h3{
+        bottom: 49%;
+        opacity: 1;
+    }
+    h1{
+        color: white;
+        font-size: 30px;
+        font-weight: 200;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <center><h1>LOGIN</h1></center>
+    <div class="right" id="left">
+        <div class="up">
+    <a href="{% url 'loginpage' %}">
+        {% load static %}<img src="{% static 'bankapp/images/user.png' %}" alt="">
+        <div class="text"><h3>USER</h3></div>
+    </a>
+    </div></div>
+    <div class="right" id="line"></div>
+        <div class="right" id="Right"><a href="{% url 'option' %}">{% load static %}<img src="{% static 'bankapp/images/user.png' %}" >
+            <div class="text1"><h3>STAFF</h3></div>
+        </a>
+    </div>
+    </div>
+</body>
+</html>

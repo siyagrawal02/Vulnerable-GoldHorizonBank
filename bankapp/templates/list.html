@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<style>
+    .update{
+        border:1px solid black;
+        height:600px;;
+        width:35%;
+    }
+    table{
+        height: 500px;;
+        width: 25%;
+    }
+    a{
+        color:#12458D;
+        text-decoration: none;
+    }
+    th{
+        background: #12458D;
+        color:white;
+        font-size: 35px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    td{
+        color:#12458D;
+        font-size: 25px;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+    }
+    h1{
+        color: #12458D;
+    font-family:'Open Sans', sans-serif ;
+    font-size: 40px;
+    text-decoration: underline;
+}
+.underline{
+        text-decoration: underline #12458D;
+
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Customer List</h1>
+    <table border =1px>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>DELETE</th>
+        </tr>
+        {% for x in customers %}
+        <tr>
+            <td><a class="underline" href="display/{{ x.id }}">{{ x.id }}</a></td>
+            <td>{{ x.fname}} {{x.mname}} {{ x.lname}}</td>
+            <td><a class="underline"href="delete/{{ x.id }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+</body>
+</html>

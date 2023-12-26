@@ -1,0 +1,80 @@
+<html>
+<head> <title> Log In</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            margin:50px 80px;
+            
+        }
+        form{
+            margin-left:37%;
+            margin-top:10%;
+            padding:10px;
+            box-shadow: 0 0 2px 0.5px  #1F2937 ;
+            border-radius: 10px;
+            width: 27%;
+            
+            
+        }
+        hr{
+            border-color:  #1F2937;
+        }
+        input[type=text],input[type=password]{
+            padding:10px;
+            border:2px;
+            border-radius: 10px;
+            width: 100%;
+            
+           
+        }
+        input:focus{
+            outline: none;      
+            box-shadow: 0 0 0 1px black; 
+            
+          }
+
+        input[type=submit]{
+            appearance: none;
+            padding:10px;
+            border: none;
+            background-color:  #1F2937;
+            color: white;
+            font-weight: 600;
+            border-radius: 5px;
+            width:100%;
+        }
+        
+    </style></head>
+    <body>
+        <form  method="post">
+        {% csrf_token %}
+        <h2> <center>Log In</center></h2><hr>
+        <br><br>
+        <input type="radio" name="type" value="student" id="student" checked>
+        <label for="student">Student</label>
+
+        <input type="radio" name="type" value="admin" id="admin">
+        <label for="admin">Admin</label>
+        <br><br>
+        <label for="Username"> Username:</label><br><br>
+        <input name="username" type="text" placeholder="Enter your username" required><br><br>
+    <label for="passsword"> Password: </label><br><br>
+        <input name="password"  type="password" placeholder="Enter your password" required> <br><br>
+        {% if message %}
+    <p class="error">{{ message }}</p>
+    {% endif %}
+        <a href=""> <center>Forgot passsword?</center></a>
+        <br>
+        
+
+        <input type="submit" value="Login">
+        <br><br>
+       <center> Not a member? <a href="{% url 'signup' %}"> Signup now</a></center>
+       </form>
+
+    </body>    
+</html>

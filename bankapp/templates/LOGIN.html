@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body {
+         margin: 0;
+         padding: 0;
+      }
+
+      .container {
+         width: 100%;
+         margin: 10px auto;
+      }
+
+      .portfolio-menu {
+         text-align: center;
+      }
+
+      .portfolio-menu ul li {
+         display: inline-block;
+         margin: 0;
+         list-style: none;
+         padding: 10px 15px;
+         cursor: pointer;
+         -webkit-transition: all 05s ease;
+         -moz-transition: all 05s ease;
+         -ms-transition: all 05s ease;
+         -o-transition: all 05s ease;
+         transition: all .5s ease;
+      }
+
+      .portfolio-item .item {
+         /*width:303px;*/
+         float: left;
+         margin-bottom: 10px;
+      }
+
+      .submit {
+
+         height: 45px;
+         width: 320px;
+         font-size: 20px;
+         background-color: #12458D;
+         color: white;
+         position: absolute;
+         right: 100px;
+      }
+
+      h1 {
+         margin-top: 20px;
+         color: white;
+         font-size: 40px;
+      }
+
+      .main-box {
+         border-bottom: 1px solid black;
+         background-color: #12458D;
+         height: 80px;
+         padding-left: 12px;
+         padding-right: 12px;
+         padding-bottom: 20px;
+         padding-top: 10px;
+         border-radius: 10px 10px 0px 0px;
+         box-shadow: 0 5px 10px white;
+         font-family: 'Open Sans', sans-serif;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="main-box">
+      <h1>GOLD HORIZON BANK
+         <a href="{% url 'login' %}"><input type="submit" class="submit" value="LOGIN"></a>
+      </h1>
+   </div>
+   <center>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12 text-center my-2">
+               <h3 class="py-3"><a href="https://spreeowl.com/"></a></h3>
+               <h4></h4>
+            </div>
+         </div>
+         <div class="portfolio-menu mt-2 mb-4">
+
+         </div>
+         <div class="portfolio-item row">
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+
+               {% load static %}<img class="img-fluid" src="{% static 'bankapp/images/1.jpg' %}" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+               {% load static %}<img class="img-fluid" src="{% static 'bankapp/images/2.jpg' %}" alt="">
+               </a>
+            </div>
+            <div class="item selfie col-lg-3 col-md-4 col-6 col-sm">
+
+               {% load static %}<img class="img-fluid" src="{% static 'bankapp/images/3.jpg' %}" alt="">
+               </a>
+            </div>
+            <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+
+               {% load static %}<img class="img-fluid" src="{% static 'bankapp/images/4.jpg' %}" alt="">
+            </div>
+         </div>
+      </div>
+   </center>
+
+</body>
+
+</html>

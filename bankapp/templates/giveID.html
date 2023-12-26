@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        span{
+            color: red;
+        }
+
+        .main-box{
+            border-bottom: 1px solid black;;
+            background-color: #12458D;
+            margin-top: 230px;;
+            width: 500px;;
+            height:80px;;
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+            border-radius: 10px 10px 0px 0px;
+            box-shadow : 0 5px 10px white;
+            margin-left: 250px;;
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 10px;;
+        }
+
+        .subbox{
+            border-bottom: 1px;border-left: 1px;border-right: 1px black; ;
+            padding-bottom: 20px;;
+            width: 420px;
+            box-shadow : 0 9px 20px rgba(42, 42, 42);
+            padding-left: 12px;
+            background-color: transparent;
+            
+            margin: 10px ;;
+            margin-left: -12px;
+            border-radius:0px 0px 10px 10px;
+            
+        }
+        textarea{
+            resize: none;
+            height: 70px;;
+            background: none;
+            border-radius: 5px;;
+                border: 2px solid #12458D;
+                font-size: 20px;;
+        }
+        body{
+            padding-left: 25%;
+            background-attachment: fixed;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        select{
+            margin-left:10px;
+            border-color: #12458D;
+        }
+        input[type=text],[type=tel]{
+
+            height: 40px;;
+            font-size: 20px;;
+                border-radius: 5px;;
+                border: 2px solid #12458D;
+        }
+        label{
+            font-size: 20px;;
+            color: #12458D;
+        }
+        h2{
+            color: #12458D;
+            font-size: 32px;
+        }
+        h1{
+            margin-top:20px;;
+            color: white;
+            font-size: 40px;
+        }
+        .Middle{
+            margin-left: 38px;;
+        }
+        .Mother{
+            margin-left: 5px;;
+        }
+        .submit{
+            border-radius: 5px;;
+            height: 45px;;
+            width:320px;
+            font-size: 20px;;
+            background-color: #12458D;
+            color:white;
+            margin-left: -25px;;
+        }
+        
+        .pan{
+            margin-left: 38px;
+        }
+        .year{
+            width:300px;
+            margin-left: 40px;;
+        }
+        
+        .fname,.lname,.faname,.phone,.state,.pin{
+            width: 350px;
+        }
+        .mname,.moname,.email,.city,.pan{
+            width: 350px;  
+            margin-left: 90px;
+        }
+        .Middle{
+            margin-left: 340px;
+        }
+        .Pan{margin-left: 300px;;}
+        .Cityy{margin-left: 395px;}
+        .Mother{
+            margin-left: 310px;
+        }
+        .Email{
+            margin-left: 300px;
+        }
+        .dob{
+            margin-left: 40px;;
+        }
+        #pre{
+            height: 30px;;
+            width: 70px;;
+            font-size: 20px;;
+        }
+        .bottom{
+            height: 2.5px;
+            background: #12458D;
+            width: 500px;;
+
+        }
+        .male,.female,.others{
+            margin-left: 20px;
+        }
+    </style>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body >
+    <div class="main-box" >
+    <center><h1>INFO UPDATION</h1></center>
+    <form class="container" action="update" method="post" >
+        {% csrf_token %}
+        <fieldset class="subbox">
+
+        <label for="id" class="dob">Enter ID</label>
+        <br><input type="text" name="id"class="year" >
+        <br><br>
+        <hr class="bottom"><br>
+        <center><input type="submit" class="submit" value="SUBMIT"></center>
+    </fieldset>
+    <br><br><br>    
+</form>
+    </div>
+</body>
+</html>

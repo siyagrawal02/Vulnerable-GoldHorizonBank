@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+<style>
+    table{
+        margin-top: 200px;
+        margin-left: 650px;
+        height: 450px;;
+        width: 35%;
+        
+    }
+   
+    th{
+        background-color: #12458d;
+        color: white;
+        font-family:'Open Sans', sans-serif;
+        font-size: 30px;;
+    }
+    td{
+        color: #12458d;
+        font-family:'Open Sans', sans-serif;
+        font-size: 25px;;
+    }
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <th>BASIC INFORMATION</th>
+        <tr><td>  <label for="First">Name: {{ customer.prefix }} {{ customer.fname }} {{ customer.mname }} {{ customer.lname }} </label>
+            <br><label for="Gender" >Gender:  {{ customer.gender }}</label>
+            <br><label for="Age" >Age:  {{ customer.age }}</label>
+            <br><label for="DOB" >DOB:  {{ customer.day }}-{{customer.month}}-{{ customer.Year }}</label>
+            <br><label for="Father" >Father's Name:  {{ customer.father_name }}</label>
+            <br><label for="Mother" class="Mother">Mother's Name:  {{ customer.mother_name }}</label> 
+            <br><label for="address">Address: {{ customer.add1 }} {{ customer.add2 }}, {{ customer.pin }},{{ customer.city }} {{ customer.state }}</label>
+        </td> </tr>
+        <th>CONTACT</th>
+        <tr><td> <label for="Phone" >Phone Number: {{ customer.phone }}</label><br>
+            <label for="Email" >Email ID: {{ customer.email }}</label></td></tr>
+        <th>ID PROOF</th>
+        <tr><td><label for="aadhar">AADHAR Number : {{ customer.aadhar }}</label><br>
+            <label for="pan">PAN Number : {{ customer.pan }}</label></td></tr>
+    </table>
+</body>
+</html>

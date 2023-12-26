@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .subbox{
+        
+        width: 40%;
+        margin: 0%;
+        padding: 0%;
+    }
+    .container{
+        margin-top: 200px;
+        margin-left: 700px;
+    }
+label{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+h2{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+.box{
+    padding: 0%;
+    margin:0% ;
+    width:100%;
+    height: 50px;
+    background-color:#12458D; ;
+    border-radius: 2px;;
+}
+</style>
+<body>
+    
+    <form class="container"  method="post" >
+        <fieldset class="subbox">
+        <div class="box"> <h2>Basic Information</h2>
+        </div>
+        <label for="First">Name: {{ customer.prefix }} {{ customer.fname }} {{ customer.mname }} {{ customer.lname }} </label>
+        <br><label for="Gender" >Gender:  {{ customer.gender }}</label>
+        <br><label for="Age" >Age:  {{ customer.age }}</label>
+        <br><label for="DOB" >DOB:  {{ customer.day }}-{{customer.month}}-{{ customer.Year }}</label>
+        <br><label for="Father" >Father's Name:  {{ customer.father_name }}</label>
+        <br><label for="Mother" class="Mother">Mother's Name:  {{ customer.mother_name }}</label> 
+        <br><label for="address">Address: {{ customer.add1 }} {{ customer.add2 }}, {{ customer.pin }},{{ customer.city }} {{ customer.state }}</label>
+        <div class="box"><h2>Contact</h2></div>
+        <label for="Phone" >Phone Number: {{ customer.phone }}</label><br>
+        <label for="Email" >Email ID: {{ customer.email }}</label>
+        <br><div class="box"><h2>ID Proof</h2></div>
+        <label for="aadhar">AADHAR Number : {{ customer.aadhar }}</label><br>
+        <label for="pan">PAN Number : {{ customer.pan }}</label>
+    </form>
+
+</body>
+</html>
